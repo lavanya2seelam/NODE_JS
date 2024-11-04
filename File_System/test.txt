@@ -1,0 +1,7 @@
+How to read file --------------------------------->fs.readFile(filepath,()=>{})
+How to write into the file------------------------>fs.writeFile(filepath,content,()=>{})
+How to update a file------------------------------>fs.appendFile(filepath,content,()=>{})
+How to delete a file------------------------------>fs.unlink(filepath,()=>{})
+How to create a folder---------------------------->fs.mkdir(filepath,()=>{})
+How to read a folder------------------------------>fs.readdir(filepath,()=>{})
+How to delete a folder---------------------------->fs.rmdir(filepath,()=>{})
