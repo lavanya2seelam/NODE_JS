@@ -6,8 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>LAVANYA RAVI KUMAR</h1>
-    <a href="./login.html">Login</a>
-    <button>login</button>
+    <input type="file" id="lavanya" onchange="uploadFile()">
 </body>
+<script>
+    function uploadFile(){
+        let lavanya=document.getElementById("lavanya");
+        if(lavanya){
+            const file=lavanya.files;
+            const formData=new FormData();
+            formData.append("lavanya",file[0]);
+            fetch("http://localhost:8100/upload",
+                {
+                    method:"POST",
+                    body:formData
+                }
+            ).then((res)=>{
+                console.log(res);
+            }).catch((err)=>{
+                console.error(err);
+            })
+        }
+    }
+</script>
 </html>
